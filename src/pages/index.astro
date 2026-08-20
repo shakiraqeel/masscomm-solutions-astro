@@ -1,0 +1,263 @@
+---
+import '../styles/global.css';
+
+const projects = [
+  { image: '/assets/card.webp', date: '1 / March / 2025', title: 'Prime Minister House', large: true },
+  { image: '/assets/card1.webp', date: '1 / March / 2025', title: 'HRPN Event in PC Hotel' },
+  { image: '/assets/card3.webp', date: '27 / June / 2025', title: 'GAIN at Marriott Hotel' }
+];
+
+const services = [
+  ['Event Management', 'At MassComm, we believe every event should tell your story. Our event planning services are designed to take the stress off your plate while turning your vision into a fully immersive experience. From concept creation to seamless execution, our team handles everything with care. As professional event decorators, we’re known for delivering stunning event design in Islamabad, tailored setups, thoughtful branding, and an atmosphere your guests won’t forget.'],
+  ['Fabrication', 'From branded exhibition stalls and stage structures to custom kiosks, our fabrication team creates strong, polished builds designed around your event and brand.'],
+  ['Audio Visual', 'Professional sound, lighting, screens, projection and technical support ensure your message is seen and heard clearly throughout the venue.'],
+  ['Food & Catering', 'Thoughtfully planned menus, professional service and seamless coordination create a dining experience that complements every occasion.'],
+  ['Design & Production', 'Our creative team develops visual identities, print collateral, digital content and complete production systems for a consistent event experience.']
+];
+
+const expertise = [
+  ['/assets/Cards3-1-2.png', 'Product Launches & Activations'],
+  ['/assets/Cards3-1-1-1.png', 'Corporate Conferences & Seminars'],
+  ['/assets/Cards3-1-5.png', 'Trade Expos & Exhibitions'],
+  ['/assets/Cards3-1-3-1.png', 'Workshops & Training Events'],
+  ['/assets/Cards3-1-2-1-1.png', 'Networking Events & Social Mixers']
+];
+
+const rentals = [
+  ['/assets/one.png', 'SMD Screens & Panels', 'High-resolution screens for impactful visual presentations at any scale.'],
+  ['/assets/two.png', 'Exhibition Stalls & Kiosks', 'Custom-designed setups that enhance brand presence and audience engagement.'],
+  ['/assets/three.png', 'Complete Audio Visual Packages', 'End-to-end AV solutions including sound, lighting, and display systems.'],
+  ['/assets/four.png', 'Custom Fabrication', 'Tailor-made structures built to match your event’s unique vision and needs.']
+];
+
+const clients = [
+  ['Becanhouse-school.png', 'BSS'], ['Bahria-University.png', 'Bahria University'], ['Altas-Honda.png', 'Atlas Honda'],
+  ['B-p.png', 'Bosch Pharma'], ['CDA.png', 'CDA'], ['Vector-Smart-Object-02.png', 'PIDE'],
+  ['Vector-Smart-Object-01.png', 'Defense'], ['akj5pd8c3evspfmyvgda.png', 'WWF'], ['hy0ld8ytxiwh9y1cq9tf.png', 'Embassy'],
+  ['jh0bza8spj9aq9b7rzp4.png', 'Calyx'], ['mief5lx8tz6kp8pmct2j.png', 'Bangladesh Government'], ['rjguayrl6ffg1aifvx17.png', 'HEC'],
+  ['syfh4kaygogplwzfs4ry.png', 'PIMA'], ['tevlomkedyidndc8qus1.png', 'Riphah'], ['wq9ghlat3do73gjglfhx.png', 'NHA'],
+  ['jvneafbdrsdoy9xwvj6z.png', 'NDMA'], ['xhyozx2lcnymuam53tor.png', 'Partner'], ['ps2anoa3jnyxliqj12is.png', 'Partner']
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="MassComm Solutions — corporate event management, fabrication, audiovisual, catering and production in Pakistan." />
+    <title>MassComm Solutions</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand" aria-label="MassComm Solutions home"><img src="/assets/logo.png" alt="MassComm Solutions" /></a>
+        <nav class="contact-nav" aria-label="Contact links">
+          <a href="tel:03456300725"><span class="icon">☎</span> 0345 6300725</a>
+          <a href="mailto:Info@masscommsolutions.pk"><span class="icon">✉</span> Info@masscommsolutions.pk</a>
+        </nav>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="active" href="#top">Home</a>
+          <button class="links-button" type="button" aria-expanded="false">Links <span>⌄</span></button>
+          <div class="dropdown">
+            <a href="#services">Services</a><a href="#expertise">Expertise</a><a href="#contact-form">Contact</a>
+          </div>
+        </nav>
+        <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-shade"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1>Leading Corporate</h1>
+            <h2>Event Management<br />Company</h2>
+            <p>We go beyond logistics; we design experiences. Whether it is a corporate gala, seminar, or product launch, Mass Comm Solutions delivers creativity, precision, and professionalism that make your event unforgettable.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact-form"><span>→</span> Let’s Plan Your Event</a>
+              <a class="phone-link" href="tel:03456300725">♧ <strong>0345 6300725</strong></a>
+            </div>
+          </div>
+          <form class="quick-form" data-demo-form>
+            <label><span class="sr-only">Name</span><input required placeholder="Name" /></label>
+            <label><span class="sr-only">Company Name</span><input placeholder="Company Name" /></label>
+            <label><span class="sr-only">Phone Number</span><input required type="tel" placeholder="⌕    Phone Number" /></label>
+            <label><span class="sr-only">Email Address</span><input type="email" placeholder="Email Address" /></label>
+            <label class="full"><span class="sr-only">City</span><input placeholder="City" /></label>
+            <button class="button button-primary" type="submit">Send</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="about section-white">
+        <div class="container about-inner">
+          <img class="about-logo" src="/assets/logoC.png" alt="Mass Comm Solutions" />
+          <div class="about-copy">
+            <p>Mass Comm Solutions is a full-service event management company specializing in planning, designing, and executing events that leave lasting impressions. From high-profile conferences to vibrant expos, our team delivers end-to-end solutions tailored to your goals.</p>
+            <p>We combine creativity with technical precision to ensure every detail—from venue layout to audiovisual setup—enhances the overall experience.</p>
+          </div>
+          <div class="project-grid">
+            {projects.map((project) => (
+              <article class:list={['project-card', { large: project.large }]} style={`background-image:url('${project.image}')`}>
+                <div class="project-overlay"></div>
+                <div class="project-meta"><small>{project.date}</small><h3>{project.title}</h3></div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <div class="container stats-grid">
+          <article><strong data-count="35" data-suffix="+">0+</strong><p>Cities Where We Have Successfully Executed Events</p></article>
+          <article><strong data-count="15" data-suffix="+">0+</strong><p>Years experience of event management sector</p></article>
+          <article><strong data-count="200" data-suffix="+">0+</strong><p>Direct and indirect employees working on our projects</p></article>
+          <article><strong data-count="2" data-suffix="B">0B</strong><p>Total project value of all time</p></article>
+        </div>
+      </section>
+
+      <section id="services" class="services section-white">
+        <div class="container narrow">
+          <h2 class="section-title">Our Services</h2>
+          <p class="section-lead left">Whatever the scale or style of your event, Mass Comm Solutions delivers with precision and creativity. Our integrated services ensure a smooth, hassle-free experience—all under one roof.</p>
+          <div class="accordion">
+            {services.map(([title, copy], index) => (
+              <article class:list={['accordion-item', { open: index === 0 }]}>
+                <button type="button" aria-expanded={index === 0 ? 'true' : 'false'}><span>{title}</span><b>{index === 0 ? '×' : '+'}</b></button>
+                <div class="accordion-panel"><p>{copy}</p></div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="expertise" class="expertise">
+        <div class="container">
+          <h2 class="section-title center">Our Expertise</h2>
+          <p class="section-lead">With years of experience and a versatile portfolio, we bring strategic insight and creative execution to every event type. Whether it is a formal conference or a dynamic product launch, our team ensures each event delivers maximum impact.</p>
+          <div class="expertise-grid">
+            {expertise.map(([image, title]) => (
+              <article class="expertise-card"><img src={image} alt={title} loading="lazy" /><div></div><p>{title}</p></article>
+            ))}
+          </div>
+          <div class="center-action"><a href="#contact-form" class="button button-primary"><span>→</span> Let us plan your next big moment!</a></div>
+        </div>
+      </section>
+
+      <section class="rentals section-white">
+        <div class="container">
+          <h2 class="section-title center">Rental <em>Solutions</em> for Corporate Events</h2>
+          <p class="section-lead">We offer a wide range of high-performance equipment and structures to support your event needs—delivered, installed, and managed by professionals.</p>
+          <div class="rental-grid">
+            {rentals.map(([image, title, copy]) => (
+              <article><img src={image} alt="" loading="lazy" /><h3>{title}</h3><p>{copy}</p></article>
+            ))}
+          </div>
+          <div class="center-action"><a class="outline-button" href="tel:03456300725"><span>→</span> Call Now</a></div>
+        </div>
+      </section>
+
+      <section class="clients">
+        <div class="container">
+          <h2 class="section-title center">Our <em>Valued</em> Clients</h2>
+          <p class="section-lead">We have had the privilege of working with industry-leading brands across diverse sectors, delivering events that exceed expectations.</p>
+          <div class="client-grid">
+            {clients.map(([file, alt]) => <div class="client-logo"><img src={`/assets/${file}`} alt={alt} loading="lazy" /></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section class="story section-white">
+        <div class="container">
+          <h2><em>Event Organizers in Pakistan:</em><br />MassComm Solutions at Your Service</h2>
+          <div class="story-more" hidden>
+            <p>From strategy and creative direction to production and on-site management, our experienced team provides dependable support for corporate events throughout Pakistan.</p>
+          </div>
+          <button class="button button-primary read-more" type="button">Read More</button>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="container">
+          <div class="map-wrap"><iframe title="MassComm Solutions location" loading="lazy" src="https://www.google.com/maps?q=Gulberg%20Empire%2C%20Gulberg%20Greens%2C%20Islamabad&output=embed"></iframe></div>
+          <form id="contact-form" class="contact-form" data-demo-form>
+            <h2>Start Your <em>Event Journey</em></h2>
+            <p>Share your event details and our team will reach out with tailored ideas and a swift response.</p>
+            <div class="form-grid">
+              <label>Name<input required name="name" placeholder="Name" /></label>
+              <label>Company Name<input name="company" placeholder="Company Name" /></label>
+              <label>Phone<input required name="phone" type="tel" placeholder="Phone" /></label>
+              <label>Email<input name="email" type="email" placeholder="Email" /></label>
+              <label>City<input name="city" placeholder="City" /></label>
+              <label>Event Date<input name="date" type="date" /></label>
+              <label class="full">Type your message here<textarea name="message" placeholder="Type your message here"></textarea></label>
+            </div>
+            <button class="button button-primary" type="submit">Submit</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div><p class="footer-label">Call us</p><a class="footer-call" href="tel:03456300725">☎ <span>0345 6300725</span></a><p class="footer-label address-label">Office Address:</p><p>Office 308 Third Floor<br />Gulberg Empire, Gulberg<br />Greens, Islamabad</p></div>
+        <nav aria-label="Footer navigation"><a href="#top">About Us</a><a href="#">Privacy Policy</a><a href="#contact-form">Contact Us</a><a href="#">Terms &amp; Conditions</a></nav>
+        <div class="footer-bottom"><small>All Rights Reserved © 2026</small><img src="/assets/logo.png" alt="MassComm Solutions" /></div>
+      </div>
+    </footer>
+    <a class="whatsapp" href="https://wa.me/923456300725" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">●</a>
+
+    <script>
+      const menuButton = document.querySelector('.menu-button');
+      const nav = document.querySelector('.main-nav');
+      menuButton?.addEventListener('click', () => {
+        const open = nav?.classList.toggle('mobile-open') || false;
+        menuButton.setAttribute('aria-expanded', String(open));
+      });
+
+      const linksButton = document.querySelector('.links-button');
+      linksButton?.addEventListener('click', () => {
+        const open = linksButton.getAttribute('aria-expanded') !== 'true';
+        linksButton.setAttribute('aria-expanded', String(open));
+        document.querySelector('.dropdown')?.classList.toggle('show', open);
+      });
+
+      document.querySelectorAll('.accordion-item button').forEach((button) => {
+        button.addEventListener('click', () => {
+          const item = button.closest('.accordion-item');
+          const open = !item?.classList.contains('open');
+          document.querySelectorAll('.accordion-item').forEach((entry) => {
+            entry.classList.remove('open');
+            entry.querySelector('button')?.setAttribute('aria-expanded', 'false');
+            const sign = entry.querySelector('b'); if (sign) sign.textContent = '+';
+          });
+          if (open && item) { item.classList.add('open'); button.setAttribute('aria-expanded', 'true'); const sign = button.querySelector('b'); if (sign) sign.textContent = '×'; }
+        });
+      });
+
+      const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const node = entry.target;
+        const end = Number(node.dataset.count || 0); const suffix = node.dataset.suffix || '';
+        let start = 0; const step = Math.max(1, Math.ceil(end / 40));
+        const timer = window.setInterval(() => { start = Math.min(end, start + step); node.textContent = `${start}${suffix}`; if (start >= end) clearInterval(timer); }, 28);
+        observer.unobserve(node);
+      }), { threshold: .5 });
+      document.querySelectorAll('[data-count]').forEach((node) => observer.observe(node));
+
+      document.querySelector('.read-more')?.addEventListener('click', (event) => {
+        const panel = document.querySelector('.story-more'); if (!panel) return;
+        panel.hidden = !panel.hidden; event.currentTarget.textContent = panel.hidden ? 'Read More' : 'Read Less';
+      });
+
+      document.querySelectorAll('[data-demo-form]').forEach((form) => form.addEventListener('submit', (event) => {
+        event.preventDefault(); const status = form.querySelector('.form-status');
+        if (status) status.textContent = 'Thank you! Your request has been received.';
+        form.reset();
+      }));
+    </script>
+  </body>
+</html>
