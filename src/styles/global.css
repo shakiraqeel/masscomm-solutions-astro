@@ -131,9 +131,10 @@ a { color: inherit; text-decoration: none; }
 .outline-button > span { width: 40px; height: 40px; margin-right: 8px; border-radius: 50%; background: var(--orange); color: #fff; display: grid; place-items: center; }
 
 .clients { background: #f6f7f8; color: #111; padding: 96px 0; }
-.client-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; margin-top: 52px; }
-.client-logo { height: 112px; background: #fff; border-radius: 12px; box-shadow: 0 4px 14px #0000000a; padding: 18px; display: grid; place-items: center; }
-.client-logo img { width: 100%; height: 100%; object-fit: contain; }
+.client-grid { width: 100%; max-width: 1152px; margin: 52px auto 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); justify-items: center; gap: 24px; }
+.client-logo { width: 144px; height: 112px; overflow: hidden; background: #fff; border-radius: 12px; box-shadow: 0 4px 14px #0000000a; display: grid; place-items: center; transition: box-shadow .2s ease, transform .2s ease; }
+.client-logo:hover { box-shadow: 0 8px 22px #00000014; transform: translateY(-2px); }
+.client-logo img { width: 100%; height: 100%; max-height: 88px; padding: 12px; object-fit: contain; }
 
 .story { padding: 88px 0; text-align: center; }
 .story h2 { margin: 0 0 34px; font-size: 48px; line-height: 1.15; }
@@ -174,6 +175,10 @@ footer { border-top: 5px solid var(--orange); background: #050505; padding: 64px
 .simple-page p, .simple-page li { color: #444; font-size: 17px; }
 .simple-page-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
 
+@media (max-width: 1279px) {
+  .client-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
 @media (max-width: 1100px) {
   .contact-nav { display: none; }
   .hero-grid { grid-template-columns: minmax(0, 1fr) 460px; gap: 40px; }
@@ -199,7 +204,7 @@ footer { border-top: 5px solid var(--orange); background: #050505; padding: 64px
   .expertise-grid { grid-template-columns: repeat(2, 1fr); }
   .expertise-card { height: 430px; }
   .rental-grid { grid-template-columns: 1fr 1fr; }
-  .client-grid { grid-template-columns: repeat(4, 1fr); }
+  .client-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .contact-layout { grid-template-columns: 1fr; }
   .map-wrap { height: 470px; }
 }
@@ -233,8 +238,8 @@ footer { border-top: 5px solid var(--orange); background: #050505; padding: 64px
   .expertise-grid { grid-template-columns: 1fr; }
   .expertise-card { height: 438px; }
   .rental-grid { grid-template-columns: 1fr; margin-top: 44px; }
-  .client-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .client-logo { height: 118px; padding: 14px; }
+  .client-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 14px; }
+  .client-logo { width: 128px; height: 96px; }
   .story { padding: 64px 0; }
   .story h2 { font-size: 30px; }
   .map-wrap { height: 390px; }
