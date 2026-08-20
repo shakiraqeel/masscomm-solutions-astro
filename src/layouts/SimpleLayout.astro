@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const page = (path = '') => `${base}${path}`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <style is:inline set:html={`@font-face{font-family:Glancyr;src:url('${page('fonts/Glancyr-Light.ttf')}') format('truetype');font-weight:300;font-display:swap}@font-face{font-family:Glancyr;src:url('${page('fonts/Glancyr-SemiBold.ttf')}') format('truetype');font-weight:600 900;font-display:swap}`} />
+    <title>{title} | MassComm Solutions</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href={base} class="brand" aria-label="MassComm Solutions home"><Image src={logo} alt="MassComm Solutions" width={190} format="webp" /></a>
+        <nav class="simple-header-nav" aria-label="Page navigation">
+          <a href={base}>Home</a>
+          <a href={page('about/')}>About</a>
+          <a href={page('contact/')}>Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main class="simple-page">
+      <div class="container"><article class="simple-page-card"><slot /></article></div>
+    </main>
+    <footer>
+      <div class="container footer-grid">
+        <div><p class="footer-label">Call us</p><a class="footer-call" href="tel:03456300725">0345 6300725</a><p class="footer-label address-label">Office Address:</p><p>Office 308 Third Floor<br />Gulberg Empire, Gulberg<br />Greens, Islamabad</p></div>
+        <nav aria-label="Footer navigation"><a href={page('about/')}>About Us</a><a href={page('privacy-policy/')}>Privacy Policy</a><a href={page('contact/')}>Contact Us</a><a href={page('terms/')}>Terms &amp; Conditions</a></nav>
+        <div class="footer-bottom"><small>All Rights Reserved © 2026</small><Image src={logo} alt="MassComm Solutions" width={205} format="webp" /></div>
+      </div>
+    </footer>
+  </body>
+</html>
